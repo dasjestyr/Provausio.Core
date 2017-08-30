@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Provausio.Core.Logging;
-using Provausio.PracticesEventSourcing.Deserialization;
 
 namespace Provausio.Practices.EventSourcing.Deserialization
 {

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EventStore.Client" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Provausio.Core\Provausio.Core.csproj" />
+    <ProjectReference Include="..\Provausio.Practices\Provausio.Practices.csproj" />
+  </ItemGroup>
+
+</Project>

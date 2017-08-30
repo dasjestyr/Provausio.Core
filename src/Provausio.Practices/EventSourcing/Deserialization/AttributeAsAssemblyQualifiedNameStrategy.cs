@@ -1,6 +1,5 @@
 using System;
 using Provausio.Core.Ext;
-using Provausio.PracticesEventSourcing;
 
 namespace Provausio.Practices.EventSourcing.Deserialization
 {

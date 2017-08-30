@@ -1,6 +1,4 @@
-﻿using Provausio.Practices.EventSourcing;
-
-namespace Provausio.PracticesEventSourcing.Deserialization
+﻿namespace Provausio.Practices.EventSourcing.Deserialization
 {
     public interface IEventDeserializationFactory
     {

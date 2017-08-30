@@ -2,7 +2,6 @@
 using System.Linq;
 using Provausio.Core.Ext;
 using Provausio.Practices.Validation.Assertion;
-using Provausio.PracticesEventSourcing;
 
 namespace Provausio.Practices.EventSourcing
 {

@@ -1,5 +1,4 @@
 ﻿using Provausio.Practices.Validation.Assertion;
-using Provausio.PracticesEventSourcing.Deserialization;
 
 namespace Provausio.Practices.EventSourcing.Deserialization
 {

@@ -1,4 +1,4 @@
-﻿namespace Provausio.Core.WebClientInfrastructure
+﻿namespace Provausio.Core.WebClient.Infrastructure
 {
     public enum BodyFormat
     {
