@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provausio.EventStore", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provausio.MongoDB", "Provausio.MongoDB\Provausio.MongoDB.csproj", "{ACD74594-7242-40DC-9FD6-1FC832B52AE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provausio.ElasticSearch", "Provausio.ElasticSearch\Provausio.ElasticSearch.csproj", "{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,18 @@ Global
 		{ACD74594-7242-40DC-9FD6-1FC832B52AE5}.Release|x64.Build.0 = Release|Any CPU
 		{ACD74594-7242-40DC-9FD6-1FC832B52AE5}.Release|x86.ActiveCfg = Release|Any CPU
 		{ACD74594-7242-40DC-9FD6-1FC832B52AE5}.Release|x86.Build.0 = Release|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Debug|x64.Build.0 = Debug|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Debug|x86.Build.0 = Debug|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Release|x64.ActiveCfg = Release|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Release|x64.Build.0 = Release|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Release|x86.ActiveCfg = Release|Any CPU
+		{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

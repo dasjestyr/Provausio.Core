@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NEST" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Provausio.Core\Provausio.Core.csproj" />
+    <ProjectReference Include="..\Provausio.EventStore\Provausio.EventStore.csproj" />
+    <ProjectReference Include="..\Provausio.Practices\Provausio.Practices.csproj" />
+  </ItemGroup>
+
+</Project>
