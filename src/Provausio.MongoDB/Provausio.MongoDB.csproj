@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
+    <PackageReference Include="Polly" Version="5.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Provausio.Core\Provausio.Core.csproj" />
+    <ProjectReference Include="..\Provausio.EventStore\Provausio.EventStore.csproj" />
+    <ProjectReference Include="..\Provausio.Practices\Provausio.Practices.csproj" />
+  </ItemGroup>
+
+</Project>
