@@ -2,7 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0.0</Version>
+    <Authors>Jeremy Stafford</Authors>
+    <Company>Provausio</Company>
+    <Product>Core Libraries</Product>
+    <Description>MongoDB core library</Description>
+    <Copyright>2017 Jeremy Stafford</Copyright>
+    <PackageTags>mongodb libraries infrastructure</PackageTags>
+    <PackageReleaseNotes>Living release</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
+
+  <Target Name="PushPackage" AfterTargets="Pack">
+    <Exec Condition="'$(Configuration)'!='AppVeyor'And'$(OS)'=='Windows_NT'And'$(Configuration)'=='Debug'" Command="nuget init $(ProjectDir)bin\Debug c:\nuget" />
+    <Exec Condition="'$(Configuration)'!='AppVeyor'And'$(OS)'=='Windows_NT'And'$(Configuration)'=='Release'" Command="nuget init $(ProjectDir)bin\Release c:\nuget" />
+    <Exec Condition="'$(Configuration)'!='AppVeyor'And'$(OS)'!='Windows_NT'And'$(Configuration)'=='Debug'" Command="mono /usr/bin/nuget.exe init $(ProjectDir)bin/Debug ~/Documents/Nuget" />
+    <Exec Condition="'$(Configuration)'!='AppVeyor'And'$(OS)'!='Windows_NT'And'$(Configuration)'=='Release'" Command="mono /usr/bin/nuget.exe init $(ProjectDir)bin/Release ~/Documents/Nuget" />
+  </Target>
 
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.4.4" />

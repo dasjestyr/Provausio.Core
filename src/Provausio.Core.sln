@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provausio.Core", "Provausio.Core\Provausio.Core.csproj", "{39E9F194-2492-4A58-84DF-BE3EF8BA5E1F}"
 EndProject
@@ -8,11 +8,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provausio.Practices", "Prov
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provausio.Core.WebClient", "Provausio.Core.WebClient\Provausio.Core.WebClient.csproj", "{6178284D-3AB6-485D-A127-6471CB578E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provausio.EventStore", "Provausio.EventStore\Provausio.EventStore.csproj", "{D6853FC0-3AA1-4A7B-8B8B-1B7B870C707F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provausio.EventStore", "Provausio.EventStore\Provausio.EventStore.csproj", "{D6853FC0-3AA1-4A7B-8B8B-1B7B870C707F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provausio.MongoDB", "Provausio.MongoDB\Provausio.MongoDB.csproj", "{ACD74594-7242-40DC-9FD6-1FC832B52AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provausio.MongoDB", "Provausio.MongoDB\Provausio.MongoDB.csproj", "{ACD74594-7242-40DC-9FD6-1FC832B52AE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provausio.ElasticSearch", "Provausio.ElasticSearch\Provausio.ElasticSearch.csproj", "{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provausio.ElasticSearch", "Provausio.ElasticSearch\Provausio.ElasticSearch.csproj", "{DC9E100D-5BCD-4861-AEC6-4F8F90429DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

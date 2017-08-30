@@ -1,0 +1,25 @@
+- branches:
+    only:
+      - master
+  version: '1.0.0.{build}'
+  image: Visual Studio 2017
+  configuration: AppVeyor
+  platform: Any CPU
+  dotnet_csproj:
+    patch: true
+    file: '**\*.csproj'
+    version: '{version}'
+    package_version: '{version}'
+  test: off
+  init:
+    - ps: '[System.IO.File]::AppendAllText("C:\Windows\System32\drivers\etc\hosts", "`n93.184.221.200  api.nuget.org")' 
+  build_script:
+  - ps: .\build-publish.ps1
+  artifacts:
+  - path: '**\*.nupkg'
+    name: Nuget Artifacts
+  deploy:    
+    - provider: NuGet
+      server: https://www.nuget.org/api/v2/package
+      api_key:
+          secure: AuDJEWADSdPZnT/FvV2O+qm9ictLPTP8MVCflyFVj2o8nJDR+DB4mNRcDypm5doT      
