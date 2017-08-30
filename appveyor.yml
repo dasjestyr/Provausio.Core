@@ -3,7 +3,7 @@
       - master
   version: '1.0.0.{build}'
   image: Visual Studio 2017
-  configuration: AppVeyor
+  configuration: Release
   platform: Any CPU
   dotnet_csproj:
     patch: true
