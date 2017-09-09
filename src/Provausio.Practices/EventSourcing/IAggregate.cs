@@ -51,16 +51,9 @@ namespace Provausio.Practices.EventSourcing
         void LoadFromHistory(IEnumerable<EventInfo> history);
 
         /// <summary>
-        /// Gets the snapshot.
+        /// Gets a snapshot of the current aggregate state.
         /// </summary>
         /// <returns></returns>
         EventInfo GetSnapshot();
-
-        /// <summary>
-        /// Gets the snapshot.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        T GetSnapshot<T>() where T : EventInfo;
     }
 }

@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 namespace Provausio.Practices.EventSourcing
 {
-    public abstract class Aggregate : IAggregate
+    public abstract class Aggregate<TSnapshotType> : IAggregate
+        where TSnapshotType : EventInfo
     {
         protected List<EventInfo> Changes = new List<EventInfo>();
 
@@ -41,30 +42,25 @@ namespace Provausio.Practices.EventSourcing
             Changes.Clear();
         }
 
+        protected abstract TSnapshotType BuildSnapshot();
+
         /// <summary>
-        /// Gets the snapshot.
+        /// Returns and instance of <see cref="EventInfo"/> representing the state of the aggregate.
         /// </summary>
         /// <returns></returns>
         public EventInfo GetSnapshot()
         {
-            var snapshot = BuildSnapshot();
-            snapshot.EntityId = Id;
-            return snapshot;
+            return BuildSnapshot();
         }
 
         /// <summary>
-        /// Gets the snapshot.
+        /// Returns the state of the aggregate (the snapshot)
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T GetSnapshot<T>() 
-            where T : EventInfo
+        public TSnapshotType GetState()
         {
-            // deliberately use unsafe cast
-            return (T) GetSnapshot();
+            return (TSnapshotType)GetSnapshot();
         }
-
-        protected abstract EventInfo BuildSnapshot();
 
         /// <summary>
         /// Marks the changes as committed.
@@ -81,7 +77,7 @@ namespace Provausio.Practices.EventSourcing
         public void LoadFromHistory(IEnumerable<EventInfo> history)
         {
             foreach (var e in history)
-                ApplyEvent((dynamic)e, false);
+                Apply((dynamic)e, false);
         }
 
         /// <summary>
@@ -91,10 +87,10 @@ namespace Provausio.Practices.EventSourcing
         public void ApplyEvent(EventInfo @event)
         {
             @event.EntityId = Id;
-            ApplyEvent(@event, true);
+            Apply(@event, true);
         }
 
-        private void ApplyEvent(EventInfo @event, bool isNew)
+        private void Apply(EventInfo @event, bool isNew)
         {
             this.AsDynamic().Apply(@event);
 
